@@ -15,7 +15,7 @@ const Vehicle = new mongoose.Schema({
     },
     vehicle_type:{
         type: String,
-        enum: ["sedan", "xuv", "suv", "jeep", "traveller_van"],
+        enum: ["sedan", "hatch_back", "suv", "jeep", "traveller_van"],
         required: true
     },  
     per_day_rent:{
