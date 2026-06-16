@@ -18,7 +18,7 @@ const Booking = new mongoose.Schema({
         requried: true
     }, 
     vehicle_year:{
-        type: String, 
+        type: Number, 
         required: true,
     },
     vehicle_number:{
