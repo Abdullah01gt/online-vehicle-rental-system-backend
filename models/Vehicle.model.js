@@ -1,6 +1,15 @@
 import mongoose from "mongoose";
 
 const Vehicle = new mongoose.Schema({
+    owner_id:{
+        type: String,
+        required: true
+    },
+  
+    owner_contact_number:{
+        type: String,
+        required: true,
+    },
     brand_name:{
         type: String,
         required: true
@@ -22,6 +31,11 @@ const Vehicle = new mongoose.Schema({
         type: Number,
         required: true
     },
+    image_url:{
+        type: String,
+        required: true
+
+    },
     owner_name:{
         type: String,
         required: true
@@ -35,8 +49,9 @@ const Vehicle = new mongoose.Schema({
         required: true
     },
     availablity_status:{
-        type: Boolean,
-        default: true,
+        type: String,
+        enum:["pending","maintenance" , "available", "rejected"],
+        default: "pending",
        
     },
     ratings:{

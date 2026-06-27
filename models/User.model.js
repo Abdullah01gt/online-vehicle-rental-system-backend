@@ -29,10 +29,7 @@ const User = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    // aadhar_number:{
-    //     type: String,
-    //     required: true
-    // },
+   
     address:{
         type: String,
         required: true,
@@ -41,6 +38,11 @@ const User = new mongoose.Schema({
         type: Number,
         required: true,
         unique: true
+    },
+    user_role:{
+        type: String,
+        enum: ["user", "owner", "admin"],
+        default: "user",
     }
 },{timestamps: true})
 
